@@ -19,25 +19,17 @@ import {OnInit} from '@angular/core';
   ],
   bootstrap: [DemoComponent]
 })
-export class BootstrapModule {
-
-
-ngAfterOnInit(){
+export class BootstrapModule {}
 
 platformBrowserDynamic().bootstrapModule(BootstrapModule).then(ref => {
-   // Ensure Angular destroys itself on hot reloads.
-   if (window['ngRef']) {
-     window['ngRef'].destroy();
-   }
-   window['ngRef'] = ref;
+  // Ensure Angular destroys itself on hot reloads.
+  if (window['ngRef']) {
+    window['ngRef'].destroy();
+  }
+  window['ngRef'] = ref;
 
-   // Otherwise, log the boot error
- }).catch(err => console.error(err));
-
-}
-
-
-}
+  // Otherwise, log the boot error
+}).catch(err => console.error(err));
 
  
 
