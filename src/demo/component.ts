@@ -148,6 +148,11 @@ export class DemoComponent {
       end: endOfDay(new Date()),
       color: colors.red,
       draggable: true,
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true
+      },
       resizable: {
         beforeStart: true,
         afterEnd: true
